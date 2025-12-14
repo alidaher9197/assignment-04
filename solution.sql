@@ -6,8 +6,8 @@ CREATE TABLE students(
     CONSTRAINT chech_email CHECK (email LIKE '%_@__%.__%'),
     age INT ,
     CONSTRAINT check_age CHECK (age >=18),
-    registration_date DATE GENERATED ALWAYS AS (DATE(created_at)) ,
-    registration_time TIME GENERATED ALWAYS AS (TIME(created_at)) ,
+    registration_date DATE DEFAULT  CURRENT_DATE() ,
+    registration_time TIME DEFAULT CURRENT_TIME(),
     created_at DATETIME DEFAULT NOW()
 );
 INSERT INTO students
