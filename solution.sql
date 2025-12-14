@@ -10,3 +10,9 @@ CREATE TABLE students(
     registration_time TIME GENERATED ALWAYS AS (TIME(created_at)) ,
     created_at DATETIME DEFAULT NOW()
 );
+INSERT INTO students
+(full_name,email,age)
+VALUES
+("ali daher","alidaher9197@gmail.com",28),
+("ahmad daher","example1@gmail.com",30),
+("samir daher","example2@gmail.com",31);
